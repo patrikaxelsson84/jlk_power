@@ -1,16 +1,49 @@
-import Header from "./components/Header";
-import { BrowserRouter as Router } from "react-router-dom";
+// App.jsx
+
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+
+import MainLayout from "./layouts/MainLayout";
+
+import Home from "./components/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <MainLayout />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+            {
+                path: "about",
+                element: <About />,
+            },
+            {
+                path: "services",
+                element: <Services />,
+            },
+            {
+                path: "portfolio",
+                element: <Portfolio />,
+            },
+            {
+                path: "contact",
+                element: <Contact />,
+            },
+        ],
+    },
+]);
 
 function App() {
-    return (
-        <>
-            <Router>
-                <div className="w-full min-h-screen bg-gray-950">
-                    <Header />
-                </div>
-            </Router>
-        </>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -7,15 +7,15 @@ export default function Header() {
 
     const navItems = [
         {
-            name: "Home",
+            name: "Hem",
             link: "/",
         },
         {
-            name: "About",
+            name: "Om oss",
             link: "/about",
         },
         {
-            name: "Services",
+            name: "Våra tjänster",
             link: "/services",
         },
         {
@@ -23,7 +23,7 @@ export default function Header() {
             link: "/portfolio",
         },
         {
-            name: "Contact",
+            name: "Kontakt",
             link: "/contact",
         },
     ];
@@ -31,12 +31,32 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-xl">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-                {/* Logo */}
+
                 <Link
                     to="/"
-                    className="text-2xl font-bold tracking-tight text-white"
+                    className="group flex items-center gap-4"
                 >
-                    <span className="text-orange-500">JLK</span> Power
+                    <div className="relative">
+                        <img
+                            src="/logga.png"
+                            alt="Reparationer Och Service"
+                            className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        />
+
+                        <div className="absolute inset-0 -z-10 rounded-full bg-orange-500/20 blur-2xl" />
+                    </div>
+
+                    <div className="hidden sm:block">
+                        <h1 className="text-xl lg:text-2xl font-bold text-white">
+                            Reparationer
+                            <span className="text-orange-500"> & </span>
+                            Service
+                        </h1>
+
+                        <p className="text-xs uppercase tracking-[0.3em] text-gray-400">
+                            Bilverkstad • Rekond • Service
+                        </p>
+                    </div>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -72,9 +92,9 @@ export default function Header() {
 
                     <Link
                         to="/contact"
-                        className="rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600"
+                        className="rounded-full bg-blue-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-600"
                     >
-                        Free Quote
+                        Skicka för offert
                     </Link>
                 </nav>
 

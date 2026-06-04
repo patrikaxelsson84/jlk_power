@@ -5,33 +5,33 @@ import {
     Sun,
     ShieldCheck,
     Wrench,
-    ArrowRight,
+    ArrowRight, Sparkles, Gauge,
 } from "lucide-react";
 
 const services = [
     {
         icon: Sun,
-        title: "Solar Panels",
+        title: "Bromsar & Hjul",
         description:
-            "Modern solar installations for homes and businesses.",
+            "Bromsbyte, hjulinställning, däckservice och säkerhetskontroller.",
     },
     {
-        icon: Battery,
-        title: "Battery Storage",
+        icon: Gauge,
+        title: "Felsökning & Diagnostik",
         description:
-            "Store energy and maximize your savings.",
+            "Avancerad datoriserad felsökning för att snabbt identifiera och åtgärda problem.",
     },
     {
-        icon: Zap,
-        title: "EV Charging",
+        icon: Sparkles,
+        title: "Rekond",
         description:
-            "Smart charging solutions for electric vehicles.",
+            "Invändig och utvändig rekonditionering som återställer nybilskänslan.",
     },
     {
         icon: Wrench,
-        title: "Electrical Services",
+        title: "Bilservice & Underhåll",
         description:
-            "Certified electricians for all electrical projects.",
+            "Originalservice enligt tillverkarens rekommendationer för att säkerställa bilens prestanda och garanti.",
     },
 ];
 
@@ -39,40 +39,53 @@ export default function Home() {
     return (
         <main className="bg-neutral-950 text-white">
             {/* HERO */}
-            <section className="relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-blue-500/20" />
+            <section className="relative min-h-[85vh] overflow-hidden">
+                {/* Background Image */}
+                <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{
+                        backgroundImage: "url('/hero-bg.jpg')",
+                    }}
+                />
 
-                <div className="mx-auto max-w-7xl px-6 py-32 lg:px-8">
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black/70" />
+
+                {/* Orange Accent Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+
+                {/* Content */}
+                <div className="relative z-10 mx-auto flex min-h-[85vh] max-w-7xl items-center px-6 lg:px-8">
                     <div className="max-w-3xl">
-            <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm text-orange-400">
-              Trusted Energy Solutions
+            <span className="rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm text-orange-400 backdrop-blur">
+                Professionell Bilservice & Rekond
             </span>
 
                         <h1 className="mt-8 text-5xl font-bold leading-tight md:text-7xl">
-                            Powering a
-                            <span className="text-orange-500"> Smarter </span>
-                            Future
+                            Din Trygga
+                            <span className="text-orange-500"> Bilpartner </span>
+                            i Vislanda
                         </h1>
 
-                        <p className="mt-6 text-lg text-gray-400">
-                            Professional solar installations, EV charging,
-                            battery storage and electrical services
-                            tailored for modern homes and businesses.
+                        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-300">
+                            Vi erbjuder bilservice, felsökning, reparationer,
+                            rekonditionering och professionell bilvård.
+                            Snabb service, transparenta priser och högsta kvalitet.
                         </p>
 
                         <div className="mt-10 flex flex-wrap gap-4">
                             <Link
                                 to="/contact"
-                                className="rounded-full bg-orange-500 px-7 py-3 font-medium transition hover:bg-orange-600"
+                                className="rounded-full bg-orange-500 px-8 py-4 font-semibold transition hover:bg-orange-600"
                             >
-                                Get a Quote
+                                Boka Tid
                             </Link>
 
                             <Link
                                 to="/services"
-                                className="rounded-full border border-white/10 px-7 py-3 font-medium hover:bg-white/5"
+                                className="rounded-full border border-white/20 bg-white/5 px-8 py-4 font-semibold backdrop-blur transition hover:bg-white/10"
                             >
-                                Explore Services
+                                Våra Tjänster
                             </Link>
                         </div>
                     </div>
@@ -86,14 +99,14 @@ export default function Home() {
                         <h3 className="text-4xl font-bold text-orange-500">
                             500+
                         </h3>
-                        <p className="text-gray-400">Projects Completed</p>
+                        <p className="text-gray-400">Gjorda tjänster</p>
                     </div>
 
                     <div>
                         <h3 className="text-4xl font-bold text-orange-500">
                             10+
                         </h3>
-                        <p className="text-gray-400">Years Experience</p>
+                        <p className="text-gray-400">Års erfarenhet</p>
                     </div>
 
                     <div>
@@ -107,7 +120,7 @@ export default function Home() {
                         <h3 className="text-4xl font-bold text-orange-500">
                             100%
                         </h3>
-                        <p className="text-gray-400">Customer Focus</p>
+                        <p className="text-gray-400">Kund Focus</p>
                     </div>
                 </div>
             </section>
@@ -116,10 +129,10 @@ export default function Home() {
             <section className="mx-auto max-w-7xl px-6 py-24">
                 <div className="mb-14 text-center">
                     <h2 className="text-4xl font-bold">
-                        Our Services
+                        Våra tjänster
                     </h2>
                     <p className="mt-4 text-gray-400">
-                        Everything you need for modern energy solutions.
+                        Inga reparationer är för stora
                     </p>
                 </div>
 
@@ -155,13 +168,12 @@ export default function Home() {
                     <div className="grid gap-12 lg:grid-cols-2">
                         <div>
                             <h2 className="text-4xl font-bold">
-                                Why Choose Us?
+                                Varför välja oss?
                             </h2>
 
                             <p className="mt-5 text-gray-400">
-                                We combine technical expertise with
-                                customer-focused service to deliver
-                                reliable and future-proof energy solutions.
+                                Vi kombinerar teknisk expertis med kundfokuserad
+                                service för att leverera pålitliga och framtidssäkra tjänster.
                             </p>
                         </div>
 
@@ -170,10 +182,10 @@ export default function Home() {
                                 <ShieldCheck className="text-orange-500" />
                                 <div>
                                     <h4 className="font-semibold">
-                                        Certified Professionals
+                                        Professionella
                                     </h4>
                                     <p className="text-gray-400">
-                                        Experienced and licensed installers.
+                                        Erfarna och kundfokus.
                                     </p>
                                 </div>
                             </div>
@@ -182,10 +194,10 @@ export default function Home() {
                                 <Zap className="text-orange-500" />
                                 <div>
                                     <h4 className="font-semibold">
-                                        Modern Technology
+                                        Lösningsorienterade
                                     </h4>
                                     <p className="text-gray-400">
-                                        Efficient solutions built for the future.
+                                        effektiva och snabb hjälp.
                                     </p>
                                 </div>
                             </div>
@@ -194,10 +206,10 @@ export default function Home() {
                                 <Battery className="text-orange-500" />
                                 <div>
                                     <h4 className="font-semibold">
-                                        Energy Optimization
+                                        Konkurrenskraftiga priser
                                     </h4>
                                     <p className="text-gray-400">
-                                        Lower costs and greater independence.
+                                        Lägre kostnader och större oberoende.
                                     </p>
                                 </div>
                             </div>

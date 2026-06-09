@@ -1,5 +1,6 @@
 // pages/Contact.jsx
 import { MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 export default function Contact() {
     return (
         <div className="py-32 text-center text-white">
@@ -17,11 +18,20 @@ export default function Contact() {
                     className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
                 >
                     <MapPin size={18} />
-                    Hitta Hit
+                    Torggatan 2, 34250 Vislanda
+                </a>&nbsp;
+                <a
+                    href="mailto:info@dittforetag.se"
+                    className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
+                >
+                    <Mail size={18} />
+                     Skicka E-post
                 </a>
-        Torggatan 2, 34250 Vislanda
-            070-0927667
-            jlk.power.ab@gmail.com Org.nr 559337-5685
+                <h1 className="mt-8 text-5xl font-bold leading-tight md:text-3xl">
+                    070-0927667
+                    <h1></h1>Org.nr 559337-5685<h1/>
+                </h1>
+
         </h1>
         </div>
     );

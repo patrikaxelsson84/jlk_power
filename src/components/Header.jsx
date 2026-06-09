@@ -92,7 +92,7 @@ export default function Header() {
 
                     <Link
                         to="/contact"
-                        className="rounded-full bg-blue-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-600"
+                        className="rounded-full bg-orange-500 px-2 py-4 text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600"
                     >
                         Skicka för offert
                     </Link>

@@ -3,9 +3,15 @@
 const images = [
     "lykta.jpg",
     "wica.jpg",
-    "bild3.jpg",
-    "bilservice.jpg",
-    "rekond.jpg",
+    "atraktorljud.jpg",
+    "baklyse.jpg",
+    "baklyse2.jpg",
+    "scania-dekal.jpg",
+    "skylt.jpg",
+    "skylt2.jpg",
+    "städ.jpg",
+    "städ2.jpg",
+    "tryck.jpg",
 ];
 
 export default function Portfolio() {

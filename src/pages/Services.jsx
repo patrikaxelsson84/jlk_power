@@ -5,8 +5,8 @@ import {
     ShieldCheck,
     Car,
     Gauge,
-    Snowflake,
     ArrowRight,
+    Palette,
 } from "lucide-react";
 
 const services = [
@@ -29,10 +29,10 @@ const services = [
             "Bromsbyte, hjulinställning, däckservice och säkerhetskontroller.",
     },
     {
-        icon: Snowflake,
-        title: "AC-Service",
+        icon: Palette,
+        title: "Dekaler",
         description:
-            "Kontroll, påfyllning och reparation av klimatanläggningar för maximal komfort.",
+            "Kontroll, justeringar och offert av storlek på dekal för maximal kundnöjdhet.",
     },
     {
         icon: Sparkles,

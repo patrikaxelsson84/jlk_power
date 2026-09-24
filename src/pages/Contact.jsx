@@ -13,13 +13,13 @@ export default function Contact() {
 
             <div className="mt-8 flex flex-col items-center gap-4">
                 <a
-                    href="https://maps.app.goo.gl/B6hg7wSRjint4une8"
+                    href="https://maps.app.goo.gl/X7KZX8kMhFi2Ewif9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
                 >
                     <MapPin size={18} />
-                    Torggatan 2, 34250 Vislanda
+                    Skörda 1, 342 52 Vislanda
                 </a>
 
                 <a
